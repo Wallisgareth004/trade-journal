@@ -1,0 +1,4 @@
+id,asset,direction,setup,grade,entry_date,entry,stop,size,risk_pct,risk_currency,exit_date,exit,fees,days_held,result_currency,result_R,process,followed_rules,exit_reason,confidence,mistake,lesson,session_window_SAST,planned_RR,emotion_word,screenshot
+2026-07-01-ABC-EXAMPLE,ABC,long,example,A,2026-07-01T08:00,100,99,1,0.5,50,2026-07-01T09:00,102,0,0,100,2,green,true,target,4,,"Example row, not a trade",14:00-18:00,2,calm,screenshots/2026-07-01_example.png
+2026-09-28-XYZ-01,XYZ,long,sweep-BOS-FVG,B,2026-09-28T15:42,2010.5,2005.5,2,0.5,10,2026-09-28T16:30,2020.25,1.2,0,18.3,1.83,yellow,false,target,3,"size off, moved stop","Wait for the close — not the ""wick""",outside (15:42),1.95,calm,
+2026-09-29-QRS-01,QRS,short,trendline-FVG,C,2026-09-29T10:05,1.0850,1.0870,10000,0.4,20,2026-09-29T11:15,1.0870,0,0,-20,-1,red,true,stop,2,,,09:00-11:00,2.5,rushed,

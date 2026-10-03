@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# The journal's command line. Standard library only, so no virtualenv sits in
+# this iCloud folder. It prints counts, never trades.
+set -euo pipefail
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$here"
+exec uv run --quiet --no-project --python 3.14 python -m tradejournal "$@"

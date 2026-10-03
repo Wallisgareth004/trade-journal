@@ -1,0 +1,26 @@
+# Trade journal settings. These say how to read TradingView's files and where
+# to serve the pages; the trading rules live in rulebook.toml.
+
+# The timezone TradingView shows its times in (Settings > timezone, or the
+# clock at the bottom right of a chart). Confirmed against a real export.
+tradingview_timezone = "Africa/Johannesburg"
+
+# A checklist counts for an order placed up to this many minutes after it.
+checklist_window_minutes = 30
+
+# The journal's port on this Mac.
+port = 8765
+
+# How a phone reaches the journal. off: this Mac only (the default).
+# serve: a Tailscale Serve rule forwards the tailnet port to the journal on
+# localhost. bind: the journal listens on the Mac's Tailscale address (the
+# Mac's firewall must allow Python).
+tailnet = "off"
+
+# Optional: only these tailnet devices may ask (empty: any device on your tailnet).
+allowed_peers = []
+
+# Keep this table last: in TOML, every key below a [table] line belongs to it.
+# Futures only: dollars per point per contract, by symbol root. Everything else
+# (forex, metals, crypto, stocks, CFDs) uses 1. Example: MES = 5, MNQ = 2.
+[point_values]

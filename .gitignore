@@ -1,0 +1,12 @@
+# Code and made-up fixtures only. Your trades, checklists, screenshots and
+# rulebook live in ~/Library/Application Support/trade-journal (see README).
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store
+# machine-only test settings
+tests/local.env

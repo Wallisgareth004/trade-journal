@@ -1,0 +1,30 @@
+# The trade journal's rulebook. Each trade is graded under the version in
+# force on its entry day (SAST).
+#
+# placeholder = true means these are stand-in numbers: they can change at any
+# time and the trades under them get re-graded. Set placeholder = false when
+# the numbers are yours; once a trade is graded under them they lock, and new
+# numbers need a new version (v1, v2 ...) with its own effective_from.
+
+version = "v0"
+effective_from = "2026-10-03"
+placeholder = true                 # stand-ins until v0's numbers are set
+
+max_trades_per_day = 3             # placeholder
+stop_after_losses = 2              # rulebook v0 (24 Sep proposal)
+risk_pct = 0.5                     # placeholder: 1R = 0.5% of the account
+min_planned_rr = 2.0               # placeholder: planned R:R of at least 2
+risk_tolerance_pct = 10            # proposal: risk within ±10% of risk_pct is on plan
+session_windows_sast = []          # unset: the session check is off until windows are set,
+                                   # e.g. ["14:00-18:00", "09:00-11:00", "18:00-21:00"]
+rule_following_threshold_pct = 90
+checkpoint_trades = 50
+checkpoint_reading = "point"     # point: v0 as written (expectancy < 0). interval: read it by its rough range
+
+# Trades entered before grading starts are shown, never graded or counted.
+# "first-checklist": grading starts with the first trade that has a checklist.
+grading_starts = "first-checklist"
+
+setups = ["sweep-BOS-FVG", "trendline-FVG"]
+emotion_words = ["calm", "unsure", "rushed", "bored", "FOMO", "revenge"]
+killer_items = ["stop_in_order", "planned_rr_ok", "size_ok", "in_session", "under_max", "under_stop_after"]
