@@ -7,9 +7,9 @@ that fills in every number, and one page that opens on how often the rules
 were followed, then shows the R curve and where you stand against an honest
 50-trade checkpoint. It runs on one Mac, with the standard library only.
 
-| Dashboard | Checklist | A trade | Weekly review |
-|---|---|---|---|
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Checklist](docs/screenshots/checklist.png) | ![Trade](docs/screenshots/trade.png) | ![Review](docs/screenshots/review.png) |
+| Checklist | A trade | Weekly review |
+|---|---|---|
+| ![Checklist](docs/screenshots/checklist.png) | ![Trade](docs/screenshots/trade.png) | ![Review](docs/screenshots/review.png) |
 
 *Every screenshot is the made-up demo (`bin/journal demo`). No real trade is in this repo.*
 
