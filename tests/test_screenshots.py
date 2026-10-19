@@ -117,7 +117,8 @@ def test_a_screenshot_moves_a_b_to_an_a(conn, tmp_path):
     tid = a_trade(conn, shot=False)
     grade.grade_all(conn)
     assert rows(conn, "select grade from trades where id = ?", tid) == [("B",)]
-    screenshots.add(conn, tid, png(), phase="entry")
+    # Within 24 h of the test trade's exit, so the date the suite runs on never matters.
+    screenshots.add(conn, tid, png(), phase="entry", added_at="2026-10-05T16:00:00+02:00")
     grade.grade_all(conn)
     assert rows(conn, "select grade from trades where id = ?", tid) == [("A",)]
 
