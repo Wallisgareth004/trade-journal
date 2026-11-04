@@ -109,14 +109,17 @@ def test_start_refuses_a_bad_settings_file_before_launching_anything(private_dir
         del os.environ["TRADE_JOURNAL_TMUX_SESSION"]
     assert run.returncode == 2
     assert "refused" in run.stderr and "point_values" in run.stderr
-    import subprocess
+    # In plain words: with tmux on this machine, also check no session was started.
+    # Without tmux (a clean CI runner) there is nothing to check, so the test ends here.
+    import shutil
 
-    assert (
-        subprocess.run(
-            ["tmux", "has-session", "-t", f"={env_session}"], capture_output=True
-        ).returncode
-        != 0
-    )
+    if shutil.which("tmux"):
+        assert (
+            subprocess.run(
+                ["tmux", "has-session", "-t", f"={env_session}"], capture_output=True
+            ).returncode
+            != 0
+        )
 
 
 def test_status_says_when_grading_starts(private_dirs):

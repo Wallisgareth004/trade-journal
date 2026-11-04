@@ -16,12 +16,12 @@ were followed, then shows the R curve and where you stand against an honest
 *Every screenshot is the made-up demo (`bin/journal demo`). No real trade is in this repo.*
 
 **Who it's for:** a trader on TradingView paper trading who wants to know whether the rules were followed, not only what the P&L did.
-**Measured:** 310 tests on made-up data, on Python 3.11 to 3.14, standard library only.
+**Measured:** the full test suite runs on made-up data on Python 3.11 to 3.14, standard library only; the badge above is the live run (two tests are opt-in by an environment flag and skip otherwise).
 
 ```sh
 git clone https://github.com/Wallisgareth004/trade-journal && cd trade-journal
 bin/journal demo    # a made-up journal on http://127.0.0.1:8799/
-bin/test            # the 310-test suite
+bin/test            # the test suite
 ```
 
 ## Why it grades the process

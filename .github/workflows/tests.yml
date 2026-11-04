@@ -22,5 +22,6 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: ${{ matrix.python }}
+      - run: brew install tmux  # the journal's start/status commands call tmux
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q
