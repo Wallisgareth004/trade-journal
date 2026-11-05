@@ -24,6 +24,28 @@ bin/journal demo    # a made-up journal on http://127.0.0.1:8799/
 bin/test            # the test suite
 ```
 
+## In 60 seconds
+
+```sh
+git clone https://github.com/Wallisgareth004/trade-journal && cd trade-journal
+bin/test
+```
+```
+310 passed, 2 skipped in 10.65s
+```
+(Captured on 5 Nov 2026, macOS, Python 3.14; the progress line is cut. The two skips are opt-in tests that need an environment flag. For the made-up journal in a browser: `bin/journal demo`.)
+
+## How it fits together
+
+```mermaid
+flowchart LR
+    A[30-second checklist<br/>before each entry] --> B[the journal<br/>one trade per row]
+    C[TradingView paper export] --> D[import<br/>fills in every number]
+    D --> B
+    B --> E[grade<br/>were the rules followed?]
+    E --> F[one page<br/>process first, then the R curve]
+```
+
 ## Why it grades the process
 
 - Fewer than 1% of day traders reliably beat the market after fees (Barber, Lee, Liu & Odean 2014).
